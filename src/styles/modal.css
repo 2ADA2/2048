@@ -1,0 +1,62 @@
+.loose{
+    top: calc(25vh + 20px);
+    width:40vw;
+    height:40vw;
+    left: 50%;
+    transform:translate(-50%, 0%);
+    margin-top: 20px;
+    background-color: #ffffff35;
+    color:#4d4d4d;
+    font-size: 3vw;
+    position: absolute;
+    animation-name: showModal;
+    animation-duration:0.5s;
+    animation-fill-mode: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+    gap:10vh;
+    border-radius:10px;
+    max-height:70Vh;
+    max-width:70vh;
+    min-width: 300px;
+    min-height: 300px;
+    user-select: none;
+    margin-top:20px;
+}
+
+.loose button{
+    width:35%;
+    height: 10%;
+    background-color: #827e71;
+    border-radius:5px;
+    font-size: 1.5vw;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border:none;
+    transition-duration: 100ms;
+    min-width: 100px;
+    min-height: 40px;
+    font-family: Roboto;
+}
+
+.loose button:hover{
+    background-color: #615e55;
+}
+
+
+.modal{
+    position: absolute;
+}
+
+@keyframes showModal {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

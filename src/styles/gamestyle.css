@@ -1,0 +1,223 @@
+.game{
+    margin-top: 2vh;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.field{
+    width:40vw;
+    height:40vw;
+    background-color:#827e71;
+    border: 1vw solid #827e71;
+    border-radius: 10px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height:70Vh;
+    max-width:70vh;
+    min-width: 300px;
+    min-height: 300px;
+    user-select: none;
+    margin-top:20px;
+}
+
+.field-row{
+    width:100%;
+    height:23%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block{
+    box-sizing: border-box;
+    width:23%;
+    height:100%;
+    background-color: #BDB8A6;
+    border-radius:5px;
+    text-align: center;
+    font-size:2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number{
+    width:100%;
+    height:100%;
+    border-radius: 5px;        
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color:red;
+    color:white; 
+    font-weight: 900;
+    animation-timing-function:ease;
+    font-size: clamp(30px, 3vw, 5vw);
+    transition-duration: 100ms;
+}
+
+.number2{
+    background-color: #e3dfce;
+    color:#7a7a7a;
+    font-size: clamp(40px, 5vw, 5vw);
+}
+.number4 {
+    background-color: #cecbbc;
+    color: #676767;
+    font-size: clamp(40px, 5vw, 5vw);
+    outline: 0 solid #cec5b4;
+}
+.number8 {
+    background-color: #d0ce8e;
+    color: #555555;
+    font-size: clamp(40px, 5vw, 5vw);
+    outline: 0 solid #e9e783;
+}
+.number16 {
+    background-color: #d9c866;
+    color:#6d6743;
+    font-size: clamp(40px, 5vw, 5vw);
+    outline: 0 solid #dfbd00;
+}
+.number32 {
+    background-color: #d4a44b;
+    color:#6d5d3f;
+    font-size: clamp(40px, 5vw, 5vw);
+    outline: 0 solid #ffb833;
+}
+.number64 {
+    background-color: #ff843c;
+    color:#6a4e3d;
+    font-size: clamp(40px, 5vw, 5vw);
+    outline: 0 solid #ff843c;
+}
+.number128 {
+    background-color: #fd5d00;
+    font-size: clamp(35px, 5vw, 5vw);
+    outline: 0 solid #db532a;
+}
+.number256 {
+    background-color: #ff3c00;
+    font-size: clamp(35px, 5vw, 5vw);
+    outline: 0 solid #ff3c00;
+}
+.number512 {
+    background-color: #d12600;
+    font-size: clamp(35px, 5vw, 5vw);
+    outline: 0 solid #bb3b00;
+}
+.number1024 {
+    background-color: #d00000;
+    outline: 0 solid #bb7000;
+}
+.number2048{
+    background-color: rgb(160, 0, 0);
+    color:white;
+    outline: 0 solid rgb(160, 0, 0);
+}
+
+.new-number{
+    animation-name: show;
+    animation-duration: 300ms;
+    animation-timing-function:ease;
+}
+.sum{
+    animation-name: sum;
+    animation-duration: 500ms;
+    animation-timing-function:ease;
+}
+
+@keyframes show{
+    0%{
+        width:0%;
+        height: 0%;
+        font-size: 0vw;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        font-size: 4vw;
+    }
+}
+
+@keyframes sum{
+    0%{
+        box-shadow: 0 0 0 rgb(255, 255, 255);
+        outline-width: 0;
+    }
+    25%{
+        outline-width: 5px;
+    }
+    50%{
+        box-shadow: 0 0 100px rgb(255, 255, 255);
+    }
+    90%{
+        box-shadow: 0 0 50px rgba(255, 217, 0, 0);
+        outline-width: 0;
+    }
+    90%{
+        box-shadow: 0 0 0px rgba(255, 217, 0, 0);
+        outline-width: 0;
+    }
+}
+
+@media (width>1000px) {
+    .number2{
+        font-size: clamp(50px, 4vw, 100px);
+    }
+    .number4 {
+        font-size: clamp(50px, 4vw, 100px);
+    }
+    .number8 {
+        font-size: clamp(50px, 4vw, 100px);
+    }
+    .number16 {
+        font-size: clamp(40px, 4vw, 80px);
+    }
+    .number32 {
+        font-size: clamp(40px, 4vw, 80px);
+    }
+    .number64 {
+        font-size: clamp(40px, 4vw, 80px);
+    }
+    .number128 {
+        font-size: clamp(35px, 4vw, 60px);
+    }
+    .number256 {
+        font-size: clamp(35px, 4vw, 60px);
+    }
+    .number512 {
+        font-size: clamp(35px, 4vw, 60px);
+    }
+}
+
+@media (height<700px) {
+    .number2{
+        font-size: clamp(30px, 5vw, 60px);
+    }
+    .number4 {
+        font-size: clamp(30px, 5vw, 60px);
+    }
+    .number8 {
+        font-size: clamp(30px, 5vw, 60px);
+    }
+    .number16 {
+        font-size: clamp(30px, 5vw, 40px);
+    }
+    .number32 {
+        font-size: clamp(40px, 5vw, 40px);
+    }
+    .number64 {
+        font-size: clamp(40px, 5vw, 40px);
+    }
+    .number128 {
+        font-size: clamp(30px, 5vw, 35px);
+    }
+    .number256 {
+        font-size: clamp(30px, 5vw, 35px);
+    }
+    .number512 {
+        font-size: clamp(30px, 5vw, 35px);
+    }
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.control-panel{
+    width:40vw;
+    height:10vh;
+    max-width:70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+    min-width: 300px;
+    min-height: 30px;
+    gap: 1vw;
+}
+
+.score{
+    background-color:#827e71;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 1vw;
+    padding: 0 2vw;
+    max-height: 7vh;
+    height:7vw;
+    min-height: 30px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
+.restart button{
+    background-color:#827e71;
+    width:30%;
+    border-radius:10px;
+    border:none;
+    height:7vw;
+    max-height: 7vh;
+    min-height: 30px;
+    width:10vw;
+    min-width: 100px;
+    font-family: Roboto;
+    font-weight: 900;
+    color:rgb(255, 255, 255);
+    font-size: 2vw;
+    letter-spacing: 1px;
+    cursor:pointer;
+    transition-duration: 100ms;
+}
+.restart button:focus{
+    outline:none;
+}
+.control-panel button:hover{
+    background-color:#62615d;
+    color:rgb(255, 255, 255);
+}
+
+.score .difference{
+    position: absolute;
+    height: 2vw;
+    margin-left:4vw;
+    background-color:#00000000;
+    animation-name:showDifference;
+    animation-duration:500ms;
+    animation-fill-mode:both;
+    animation-timing-function: ease-in;
+    color:rgb(87, 78, 48);
+}
+
+@keyframes showDifference{
+    0%{
+        top:20vh ;
+    }
+    90%{
+        opacity:0%;
+    }
+    100%{
+        top:5vh;
+        opacity:0%;
+    }
+}
