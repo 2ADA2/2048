@@ -1,0 +1,39 @@
+.profile{
+    padding: 40px 20px;
+    display: flex;
+    gap:40px;
+}
+
+.chart-container{
+    background-color:#3c3c41;
+    padding: 40px;
+    min-height: 400px;
+    width: 70%;
+
+    max-height: 750px;
+
+    aspect-ratio: 2 / 1;
+}
+
+.chart-container canvas{
+    width: 100%;
+}
+
+.user-info{
+    min-width: 300px;
+    max-width: 600px;
+    width: 30%;
+    height: 100%;
+    min-height: 400px;
+    height: 700px;
+    background-color:#3c3c41;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+}
+.user-info h3{
+    font-weight: 300;
+    letter-spacing: 2px;
+}

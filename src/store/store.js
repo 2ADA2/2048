@@ -33,7 +33,8 @@ class Store {
         this.field = spawn(newField);
         this.end = false;
         this.score = 0;
-        localStorage.setItem('field', JSON.stringify(newField.slice(0)));
+        localStorage.setItem('field', JSON.stringify(this.field.slice(0)));
+        localStorage.setItem("score", 0)
     }
     cleanField(){
         let newField = [];
@@ -51,7 +52,8 @@ class Store {
         const oldScore = this.score;
         this.score = this.score + score;
         this.difference = this.score-oldScore;
-
+        localStorage.setItem("score", this.score)
+        console.log(localStorage.getItem("score"))
     }
     cleanDifference(){
         this.difference = 0;

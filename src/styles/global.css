@@ -5,34 +5,47 @@
     font-family: Roboto;
 }
 header{
-    background: rgba(0, 0, 0, 0.437);
-    height:15vh;   
+    background: #282828;
+    height:50px;   
     display: flex;
     align-items:center;
     justify-content: center;
+    border-bottom:1px solid #464646;
 }
 
 nav{
     height: 100%;
-    width:70%;
+    width:100%;
     display: flex;
     align-items:center;
     justify-content: center;
-    gap:5vw;
+    gap:50px;
 }
 nav a {
     text-decoration: none;
-    color:white;
+    color:#a9a9a9;
     letter-spacing: 1px;
     transition-duration: 100ms;
-    font-size: clamp(20px, 1.5vw, 100px);
+    font-size: 20px;
     cursor: pointer;
-    
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 100%;
+    height: 100%;
+    padding-top: 15px;
 }
 nav a:hover {
     text-decoration: none;
-    color:#bdb8a6;
+    color:#f0f0f0;
     
+}
+
+nav .active{
+    color:white;
+    border-bottom: 3px solid white;
+}
+nav .active:hover{
+    color:white;
 }
 
 nav a::first-letter{
@@ -40,7 +53,7 @@ nav a::first-letter{
 }
 
 body{
-    background: #bdb8a6;
+    background: #1a1a1a;
     color:white;
 }
 

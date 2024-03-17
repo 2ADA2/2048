@@ -1,74 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .control-panel{
-    width:40vw;
-    height:10vh;
-    max-width:70vh;
+    width:600px;
+    height:100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
     margin-bottom: 10px;
-    min-width: 300px;
-    min-height: 30px;
-    gap: 1vw;
+    justify-content: space-between;
 }
 
 .score{
-    background-color:#827e71;
+    background-color:#2a2a2a;
     display: flex;
     justify-content: center;
     align-items: center; 
-    border-radius: 1vw;
-    padding: 0 2vw;
-    max-height: 7vh;
-    height:7vw;
-    min-height: 30px;
-    font-family: Roboto;
-    font-weight: 900;
-    font-size: 1.5vw;
+    border-radius: 10px;
+    padding: 0 50px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 26px;
 }
 
 .restart button{
-    background-color:#827e71;
-    width:30%;
+    background-color:#2a2a2a;
     border-radius:10px;
+    width: 189px;
+    height: 60px;
     border:none;
-    height:7vw;
-    max-height: 7vh;
-    min-height: 30px;
-    width:10vw;
-    min-width: 100px;
     font-family: Roboto;
-    font-weight: 900;
-    color:rgb(255, 255, 255);
-    font-size: 2vw;
-    letter-spacing: 1px;
+    font-weight: 400;
+    color:white;
+    font-size: 26px;
     cursor:pointer;
     transition-duration: 100ms;
 }
 .restart button:focus{
     outline:none;
 }
+.restart button::first-letter{
+    text-transform: uppercase;
+}
 .control-panel button:hover{
-    background-color:#62615d;
+    background-color:#2e2e2e;
     color:rgb(255, 255, 255);
 }
 
 .score .difference{
     position: absolute;
-    height: 2vw;
-    margin-left:4vw;
-    background-color:#00000000;
     animation-name:showDifference;
     animation-duration:500ms;
     animation-fill-mode:both;
     animation-timing-function: ease-in;
     color:rgb(87, 78, 48);
+    color:rgba(255, 255, 255, 0.884);
+    font-weight: 100;
+    margin-left:100px;
 }
 
 @keyframes showDifference{
     0%{
-        top:20vh ;
+        top:130px ;
     }
     90%{
         opacity:0%;

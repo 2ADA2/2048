@@ -23,18 +23,18 @@ export const Game = observer(() => {
                 const oldField = JSON.parse(JSON.stringify(store.field));
                 const newField = calcField(oldField, index);
                 store.updateField(newField);
-            }, 0)
+            }, 10)
         }
     }
 
     useEffect(() => {
         const empty = [[null,null,null,null],[null,null,null,null],[null,null,null,null],[null,null,null,null]];
         if(JSON.stringify(field) == JSON.stringify(empty)){
-            const newField = spawn(field);
-            store.updateField(spawn(newField));                
+            setTimeout(()=>{
+                const newField = spawn(field);
+                store.updateField(spawn(newField));                  
+            },10)  
         }
-
-
         window.addEventListener("keydown", prohibitScroll)
         window.addEventListener("keydown", handleKeyDown)
         return () => {
@@ -44,6 +44,10 @@ export const Game = observer(() => {
     },[]);
 
     return (
+    <>
+        <section className="filler">
+            filler
+        </section>
         <div className = "game">
             {(end)?<LoseModal></LoseModal>:<></>}
             <div className = "game-container">
@@ -52,5 +56,7 @@ export const Game = observer(() => {
             </div>
 
         </div>
+    </>
+
     );
 })
