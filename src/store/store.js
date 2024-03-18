@@ -11,6 +11,7 @@ class Store {
     end = 0;
     score = (Number(localStorage.getItem("score")) || 0);
     difference = 0;
+    maxScore = (Number(localStorage.getItem("max-score")) || 0);;
 
     constructor () {
         makeAutoObservable(this);

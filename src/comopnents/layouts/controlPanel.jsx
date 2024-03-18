@@ -19,16 +19,26 @@ function ScoreDifference(){
 export const ControlPanel = () => {
     const [show, setShow] = useState(0);
     const score = store.score;
+    const maxScore = store.maxScore
     return (
         <div className = "control-panel">
-            <div className="restart">
-                <button onClick={() => isRestart()} tabIndex={-1}>restart</button>
+            <div className="reverse-button-container">
+                <h1>2048</h1>
+                <div className="restart">
+                    <button onClick={() => isRestart()}>restart</button>
+                </div>                
             </div>
-            <div className = "score">
-                score: {score}
-                {(store.difference) ? <ScoreDifference/>:<></>}
-                
+            <div className="score-container">
+                <div className="score">
+                    max score: {maxScore}
+                </div>
+                <div className = "score">
+                    score: {score}
+                    {(store.difference) ? <ScoreDifference/>:<></>}
+                </div>
             </div>
+
+
         </div>
     )
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .control-panel{
     width:600px;
-    height:100px;
+    height:150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,15 @@
     margin-bottom: 10px;
     justify-content: space-between;
 }
-
+.score-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: auto;
+    height: 100%;
+    justify-content: space-between;
+}
 .score{
     background-color:#2a2a2a;
     display: flex;
@@ -20,8 +28,21 @@
     height: 60px;
     font-weight: 400;
     font-size: 26px;
+    outline: 1px solid #636363;
 }
-
+.reverse-button-container{
+    display: flex;
+    height: 100%;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reverse-button-container h1{
+    font-size: 80px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+}
 .restart button{
     background-color:#2a2a2a;
     border-radius:10px;
@@ -34,9 +55,13 @@
     font-size: 26px;
     cursor:pointer;
     transition-duration: 100ms;
+    outline: 1px solid #636363;
 }
 .restart button:focus{
-    outline:none;
+    outline: 1px solid #ffffff;
+}
+.restart button:active {
+    outline: 1px solid #636363;
 }
 .restart button::first-letter{
     text-transform: uppercase;
@@ -60,13 +85,13 @@
 
 @keyframes showDifference{
     0%{
-        top:130px ;
+        margin-bottom: 10px;
     }
     90%{
         opacity:0%;
     }
     100%{
-        top:5vh;
+        margin-bottom: 200px;
         opacity:0%;
     }
 }
