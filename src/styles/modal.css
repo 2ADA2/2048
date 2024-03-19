@@ -25,14 +25,15 @@
 }
 
 .loose button{
-    width:180px;
+    width:200px;
     height: 60px;
     background-color: #2a2a2a;
-    border-radius:5px;
+    border-radius:10px;
+    border:none;
+    outline: 1px solid #636363;
     font-size: 26px;
     color:white;
     cursor: pointer;
-    border:none;
     transition-duration: 100ms;
     min-width: 100px;
     min-height: 40px;
